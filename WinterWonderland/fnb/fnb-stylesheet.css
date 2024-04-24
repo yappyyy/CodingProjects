@@ -1,0 +1,108 @@
+#nav-bar{
+    background: #87CEFA; /*using this color as the background to suit the winter theme*/
+    height: 200px;
+}
+
+.logo{
+    width: 400px;
+    height: 300px;
+     
+}
+
+ul {
+    list-style: none; /*so that the header items do not have a dot*/
+    display: flex;  /*by using flex able to control the immediate elements*/
+    font-size: 30px;
+}
+
+a {
+    text-decoration: none; /*there would not be a clash in style in the hyperlink*/
+    color: #fff;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 5fr 2fr 3fr;
+    align-items: center;
+    
+}
+
+ul li a{
+    padding: 30px;
+    font-weight: bold;
+}
+
+footer{
+    position: relative;  /*must  be relative so the the footer will not block the other contents*/ 
+    bottom: 0px;
+    width: 100%;    /*adjusted based on the webpage size*/
+    background:#87CEFA; /*using this color as the background to suit the winter theme*/
+}
+
+.main-content{
+    display: flex;
+    
+}
+
+.main-content .box{
+    flex-basis: 50%;
+    padding:10px 20px;
+    
+}
+
+.box h1{
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    
+}
+
+.box .content{
+    margin: 20px 0 0 0;
+    
+}
+
+.left .content .social{
+    margin: 20px 0 0 0;
+}
+
+body{
+    background-color:#DBF1FF; /*using this color as the background to suit the winter theme*/
+    font-family: 'Roboto', sans-serif; /*using this font as it is making the website look friendly to the users*/
+}
+
+a{  
+    color: #000;
+    font-size: 25px;
+    text-align: center;
+}
+
+.main-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr)); /*this enables auto placement of the child elements*/
+    width: 90%;
+    margin: 20px auto;
+    font-size: 25px;
+}
+
+.main-container img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;  /*so that the image fits inside the container*/
+    border-radius: 10%; /*make the border have a rounded square shape*/
+}
+
+.card{
+    background: lightblue;  /*using this color as the background to suit the winter theme*/
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 10px;
+    border-radius: 20px; /*make the border have a rounded square shape*/
+}
+
+a{  
+    color: #000;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+}

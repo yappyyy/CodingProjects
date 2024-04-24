@@ -1,0 +1,180 @@
+#nav-bar{
+    background: #87CEFA; /*using this color as the background to suit the winter theme*/
+    height: 200px;
+}
+
+.logo{
+    width: 400px;
+    height: 300px;
+}
+
+ul {
+    list-style: none;   /*so that the header items do not have a dot*/
+    display: flex;  /*by using flex able to control the immediate elements*/
+    font-size: 30px;
+}
+
+a {
+    text-decoration: none; /*so that hyperlink style will not be affected*/
+    color: #fff;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 5fr 2fr 3fr; /*by using grid the header would be in a row*/
+    align-items: center;
+    
+}
+
+ul li a{
+    padding: 30px;
+    font-weight: bold;
+}
+
+footer{
+    position: relative;  /*must  be relative so the the footer will not block the other contents*/  
+    bottom: 0px;            
+    width: 100%;    /*adjusted based on the webpage size*/
+    background:#87CEFA; /*using this color as the background to suit the winter theme*/
+}
+
+.main-content{
+    display: flex;
+}
+
+.main-content .box{
+    flex-basis: 50%;
+    padding:10px 20px;
+}
+
+.box h1{
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.box .content{
+    margin: 20px 0 0 0;
+}
+
+.left .content .social{
+    margin: 20px 0 0 0;
+}
+
+body{
+    background-color:#DBF1FF; /*using this color as the background to suit the winter theme*/
+    font-family: 'Roboto', sans-serif;  /*using this font as it is making the website look friendly to the users*/
+}
+
+.carousel-wrapper{
+    height: 400px;
+    position: relative;
+    width: 800px;
+    display: block;
+    margin: 50px auto;
+    border: 2px solid black;
+}
+
+.carousel-item{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px 50px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.arrow{
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 12px;
+}
+
+.arrow-prev{
+    left: 30px;
+    position: absolute; /*so that the arrow would not move*/
+    top: 50%;
+    transform: translateY(-50%) rotate(135deg); /*changes to the prevoius image*/
+}
+
+.arrow-next{
+    right: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg); /*changes to the next image*/
+}
+[id^="item"]{
+    display: none;  /*to display the element*/
+}
+.item-1{
+    z-index: 2;    /*using z-index the stack level*/
+    opacity: 1;
+    background: url('../images/caro1.jpg');
+    background-size: cover;  /*must be cover so that imgages fit the carousel*/
+}
+.item-2{
+    background: url('../images/caro2.jpg');
+    background-size: cover;
+}
+.item-3{
+    background: url('../images/caro3.jpg');
+    background-size: cover; 
+}
+:target ~ .item-1{
+    opacity: 0;         /*maing it completely transparent*/
+}
+  #item-1:target ~ .item-1 {
+    opacity: 1;
+  
+}
+  #item-2:target ~ .item-2, #item-3:target ~ .item-3 {
+    z-index: 3;
+    opacity: 1; 
+} 
+
+.columns {
+    display: grid;
+    grid-template-columns: auto auto; /*the columns sizing would correspond to the page size*/
+    align-items: center;
+    font-weight: 900;
+    font-size: 25px;
+}
+
+img{
+    width: 100%;    /*image resizes according to the webpage*/
+    height: 600px;
+    align-items: center;
+}
+
+a{  
+    color: #000;
+    font-size: 25px;
+    text-align: center;
+}
+
+.btn{                       
+    width: 200px;
+    height: 60px;
+    color: black;
+    background: lightblue;  /*using this color as the background to suit the winter theme*/
+    font-size: 18px;
+    text-decoration: none;
+    margin: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;           /*controlling how was the effect takes*/
+    position: relative;
+}
+
+.btn1:hover{
+    background: transparent;        /*making the button have a hover effect*/
+    border: 2px solid black;
+    color: black;
+    margin-top: 5px;
+}
+
+

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>TimeKeeper</title>
+        <meta name="description" content="Timekeeper">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../dress/dress.css">
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      />
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+        crossorigin="anonymous"
+      />
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+        crossorigin="anonymous"
+      />
+  
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+        integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
+        <!-- Start of multiple card type-->
+        <script id="card_template" type="text/x-handlebars-template">
+            {{#each card}}
+        <div class="col-md">
+          <div class="panel panel-primary">
+            <div class="panel-heading">{{title}}</div>
+            <div class="panel-body">
+              <!--width set to 100% to make it template responsive-->
+              <img
+                src="../dress/{{shortCode}}.jpg"
+                class="img-responsive"
+                style="width: 100%"
+                alt="watch type image"
+              />
+            </div>
+            <div class="panel-footer">{{value}}</div>
+          </div>
+        </div>
+      {{/each}}
+        </script>
+        <script src = "../dress/dress.js"></script>
+          <!-- End of multiple card type-->
+    </head>
+    <body>
+        <!-- Header/Navigation Bar Start-->
+        <header>
+            <div class="logo">
+                <img src="../dress/Logo.png" alt="">
+            </div>
+            <input type="checkbox" id="nav_check" hidden>
+            <nav>
+                <div class="logo">
+                    <img src="../dress/Logo.png" alt="TimeKeeper Logo">
+                </div>
+                <!--using unorder list and list to create the header-->
+                <ul>
+                    <li>
+                        <a href="../index/index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="../diver/diver.html">Diver</a>
+                    </li>
+                    <li>
+                        <a href="../chronograph/chronograph.html">Chronograph</a>
+                    </li>
+                    <li>
+                        <a href="../dress/dress.html"class="active">Dress</a>
+                    </li>
+                    <li>
+                        <a href="../gmt/gmt.html">GMT</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Header/Navigation for mobile-->
+            <label for="nav_check" class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </label>
+        </header>
+        <!-- Header/Navigation Bar End-->
+         <!--Carousel Image Start-->
+         <div class="carousel">
+          <!-- image container to store all the carousel image-->
+            <div class="image-container" id="imgs">
+              <img src="../dress/dress1.jpg"
+             alt="A. Lange & Söhne 1"
+             />
+          <img
+             src="../dress/dress2.jpg"
+             alt="Cartier Tank"
+             />
+          <img
+             src="../dress/dress3.jpg"
+             alt="Rolex Day-Date 40"
+             />
+          <img
+             src="../dress/dress4.jpg"
+             alt="Patek Philippe Nautilus 5711A"
+             />
+            </div>
+            <!--Creating left right buttons for carousel-->
+            <div class="buttons-container">
+              <button id="left" class="btn">Prev</button>
+              <button id="right" class="btn">Next</button>
+            </div>
+        </div>
+        <!--Carousel Image end-->
+        <!--Dress Start-->
+        <span class = "intro">
+            <h2>Dress Watch 101:</h2>
+            <span class = "history">
+                <article><first-letter>I</first-letter>n the classical sense, a dress watch is an elegant watch that is typically worn with a formal suit or tuxedo. However, these days it can also be sported with casual attire like polo and jeans with which it pairs equally fabulously. Most dress watches have no complications or have at most a second hand and a date window.Besides elegance, minimalism is what makes a dress watch.</article>
+            </span>
+        </span>
+        <!--Dress grid layout using bootstrap-->
+        <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                <img src = "../dress/dress5.jpg" alt ="A RENAULT FT-17">
+                <p>A RENAULT FT-17, THE INSPIRATION FOR THE CARTIER TANK</p>
+                <article>Louis Cartier, the founder of the brand, invented the Cartier Tank in 1917. It is the brand’s most iconic model. The Tank’s name and design pays homage to the Renault FT-17, a French tank used during the first World War.</article>
+              </div>
+              <div class="col-sm">
+                <img src = "../dress/dress6.jpg" alt ="Cartier Tank Solo">
+                <p>The Cartier Tank</p>
+                <article>The watch somehow manages to be both rectangular and square, borrowing lines from its namesake.  The leather strap seamlessly integrates into the case, and Roman numerals grace the dial. Lastly, the crown features a single blue sapphire.</article>
+              </div>
+              <div class="col-sm">
+                <img src = "../dress/dress7.jpg" alt ="Cartier Tank Mechanism">
+                <p>Cartier Tank Movement</p>
+                <article>The Tank wristwatch has taken that inspiration and through the alchemy of abstraction, transmuted it into a byword for beauty.</p>
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class ="watchlist">
+        <h3>TimeKeeper Watch List</h3>
+    </div>
+    <!--So That the card template appears at the bottom and not at the top-->
+    <div class="container">
+        <div id="sub_container" class="row">
+        </div>
+      </div>
+      <br /><br />
+        <!-- Footer Start -->
+        <footer>
+            <div class ="footer-content">
+                <h3>TimeKeeper</h3>
+                <p>This website was created by watch enthusiasts for watch enthusiasts to be lost into the world of horology.</p>
+            <!--Soial media-->
+            <ul class ="social">
+             <li><a href="" class="fa fa-facebook"></a></li>
+             <li><a href="" class="fa fa-twitter"></a></li>
+             <li><a href="" class="fa fa-youtube "></a></li>
+             <li><a href="" class="fa fa-instagram"></a></li> 
+            </ul>
+            </div>
+            <!--Copyright symbol-->
+            <div class = sub>
+                <p>Subcribe to get our lastest newsletter</p>
+            </div>
+            <!--Email validation using js-->
+            <div class="mail">
+              <!--using forms to create the email validation-->
+              <form name="form1" action="#">
+              <ul>
+              <li><input type='text' name='text1'/></li>
+              <li> </li>
+              <li class="Validate"><input type="submit" name="Validate" value="Subscribe" onclick="ValidateEmail(document.form1.text1)"/></li>
+              <li> </li>
+              </ul>
+              </form>
+              </div>
+            <div class ="footer-bottom">
+                <p> &#169;TimeKeeper Copyright 2023 All Rights Reserved</p>
+            </div>
+        </footer>
+        <!-- Footer End-->
+    </body>
+</html>

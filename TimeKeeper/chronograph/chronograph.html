@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>TimeKeeper</title>
+        <meta name="description" content="TimeKeeper">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/chronograph/chronograph.css">
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      />
+  
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+        crossorigin="anonymous"
+      />
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+        crossorigin="anonymous"
+      />
+  
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+        integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
+         <!-- Start of multiple card type-->
+         <script id="card_template" type="text/x-handlebars-template">
+            {{#each card}}
+            <!--using bootstrap gridlayou for the template-->
+        <div class="col-md">
+          <div class="panel panel-primary">
+            <div class="panel-heading">{{title}}</div>
+            <div class="panel-body">
+                <!--image Width 100% to make it responsive-->
+              <img
+                src="../chronograph/{{shortCode}}.jpg"
+                class="img-responsive"
+                style="width: 100%"
+                alt="watch type image"
+              />
+            </div>
+            <div class="panel-footer">{{value}}</div>
+          </div>
+        </div>
+      {{/each}}
+        </script>
+        <script src="../chronograph/chronograph.js"></script>
+    </head>
+    <body>
+        <!-- Header/Navigation Bar Start-->
+        <header>
+            <div class="logo">
+                <img src="../chronograph/Logo.png" alt="TimeKeeper Logo">
+            </div>
+            <input type="checkbox" id="nav_check" hidden>
+            <nav>
+                <div class="logo">
+                    <img src="../chronograph/Logo.png" alt="TimeKeeper Logo">
+                </div>
+                <ul>
+                    <li>
+                        <a href="../index/index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="../diver/diver.html">Diver</a>
+                    </li>
+                    <li>
+                        <a href="../chronograph/chronograph.html"class="active">Chronograph</a>
+                    </li>
+                    <li>
+                        <a href="../dress/dress.html">Dress</a>
+                    </li>
+                    <li>
+                        <a href="../gmt/gmt.html">GMT</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Header/Navigation for mobile-->
+            <label for="nav_check" class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </label>
+        </header>
+        <!-- Header/Navigation Bar End-->
+        <!-- Iconic Chrono pic-->
+        <span class = "main-pic">
+            <img src ="../chronograph/chrono1.jpg" alt = "Paul Newman Daytona">
+            <p>Rolex Cosmograph Daytona Reference 6239 </p>
+        </span>
+        <!-- chrono Start -->
+        <span class = "history">
+            <h2>Chronograph Watch 101:</h2>
+                <span class ="intro">
+                    <article><firstletter>A</firstletter> chronograph watch is a traditional timepiece fitted with an extra complication to act as a stopwatch. A watch can come with one chronograph, usually two and even as much as three at once. These chronographs will be used to measure time (in real-time and relatively) to different levels of accuracy.Chronographs often have complications on the face of the watch which can be used to record different time measurements, moon cycles, heart rate and more. Chronographs have separate buttons to stop, start, and reset the stopwatch complication, with the start button typically at the two and four o’clock position.</article>
+                </span>
+        </span>
+        <!--Chrono grid style using bootstrap-->
+        <div class="container">
+            <div class="row">
+              <div class="col">
+                <img src="../chronograph/chrono2.jpg" alt="Patek Philippe 1923 officer">
+                <p>1923 Patek Philippe Split-Seconds Chronograph</p>
+              </div>
+              <div class="col">
+                <img src="../chronograph/chrono3.jpg" alt= "Patek Philippe 1923 officer">
+                <p>1923 Patek Philippe Split-Seconds Chronograph Mechanism</p>
+              </div>
+              </div>
+              <article> As it stands the Patek Philippe 1923 Officer is being referred to as the “earliest known” split chronograph in existence. Sold in 1923, it’s said that it took 20 years to manufacture. The remarkable movement - the smallest and flattest known split-seconds movement - was likely produced by the Victorin Piguet firm. It features a straight line lever escapement, 23 jewels, 8 adjustments, and bi-metallic compensation balance. </article>
+        </div>      
+        <div class ="watchlist">
+            <h3>TimeKeeper Watch List</h3>
+        </div>
+    </div>
+    <!-- so that the template appears at the bottom -->
+            <div class="container">
+                <div id="sub_container" class="row">
+                </div>
+              </div>
+              <!-- There is a spacing before the footer-->
+              <br /><br />
+              <!-- End of multiple card type-->
+        <!-- Footer Start -->
+        <footer>
+            <div class ="footer-content">
+                <h3>TimeKeeper</h3>
+                <p>This website was created by watch enthusiasts for watch enthusiasts to be lost into the world of horology.</p>
+            <!--Soial media-->
+            <ul class ="social">
+             <li><a href="" class="fa fa-facebook"></a></li>
+             <li><a href="" class="fa fa-twitter"></a></li>
+             <li><a href="" class="fa fa-youtube "></a></li>
+             <li><a href="" class="fa fa-instagram"></a></li> 
+            </ul>
+            </div>
+            <!--Copyright symbol-->
+            <div class = sub>
+                <p>Subcribe to get our lastest newsletter</p>
+            </div>
+            <!--Email validation using js-->
+            <div class="mail">
+                <!--using forms to create the email validation-->
+                <form name="form1" action="#">
+                <ul>
+                <li><input type='text' name='text1'/></li>
+                <li> </li>
+                <li class="Validate"><input type="submit" name="Validate" value="Subscribe" onclick="ValidateEmail(document.form1.text1)"/></li>
+                <li> </li>
+                </ul>
+                </form>
+                </div>
+            <div class ="footer-bottom">
+                <p> &#169;TimeKeeper Copyright 2023 All Rights Reserved</p>
+            </div>
+        </footer>
+        <!-- Footer End-->
+    </body>
+</html>

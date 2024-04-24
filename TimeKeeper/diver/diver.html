@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>TimeKeeper</title>
+    <meta name="description" content="TimeKeeper" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../diver/diver.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+      integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Start of multiple card type-->
+    <script id="card_template" type="text/x-handlebars-template">
+      {{#each card}}
+        <div class="col-lg">
+          <div class="panel panel-primary">
+            <div class="panel-heading">{{title}}</div>
+            <div class="panel-body">
+              <!--Width set to 100% to make image responsive-->
+              <img
+                src="../diver/{{shortCode}}.jpg"
+                class="img-responsive"
+                style="width: 100%"
+                alt="watch type image"
+              />
+            </div>
+            <div class="panel-footer">{{value}}</div>
+          </div>
+        </div>
+      {{/each}}
+    </script>
+    <script src="../diver/diver.js"></script>
+  </head>
+  <body>
+    <!-- Header/Navigation Bar Start-->
+    <header>
+      <div class="logo">
+        <img src="../diver/Logo.png" alt="TimeKeeper Logo" />
+      </div>
+      <input type="checkbox" id="nav_check" hidden />
+      <nav>
+        <div class="logo">
+          <img src="../diver/Logo.png" alt="TimeKeeper Logo" />
+        </div>
+        <ul>
+          <li>
+            <a href="../index/index.html">Home</a>
+          </li>
+          <li>
+            <a href="../diver/diver.html" class="active">Diver</a>
+          </li>
+          <li>
+            <a href="../chronograph/chronograph.html">Chronograph</a>
+          </li>
+          <li>
+            <a href="../dress/dress.html">Dress</a>
+          </li>
+          <li>
+            <a href="../gmt/gmt.html">GMT</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Header/Navigation for mobile-->
+      <label for="nav_check" class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </label>
+    </header>
+    <!-- Header/Navigation Bar End-->
+    <!--Carousel Image Start-->
+    <div class="carousel">
+      <!-- image container to store all the carousel image-->
+      <div class="image-container" id="imgs">
+        <img src="../diver/diver1.jpg" alt="Tudor Black Bay 58" />
+        <img src="../diver/diver2.jpg" alt="Rolex Submariner" />
+        <img src="../diver/diver3.jpg" alt="Omega Seamaster" />
+        <img src="../diver/diver4.jpg" alt="Seiko SKX007" />
+      </div>
+    <!--Creating left right buttons for carousel-->
+      <div class="buttons-container">
+        <button id="left" class="btn">Prev</button>
+        <button id="right" class="btn">Next</button>
+      </div>
+    </div>
+    <!--Carousel Image end-->
+    <div class="history">
+      <h2>Dive Watch 101:</h2>
+      <div class="intro">
+        <p>
+          <first-letter>A</first-letter> dive watch is a timepiece that has been
+          specifically developed to withstand great pressure underwater. As
+          such, these watches often carries water-resistance over 100m / 10 ATM.
+          The modern concept of a dive watch is born in the mid-1950s, with the
+          introduction of the Blancpain Fifty Fathoms and the Rolex
+          Submariner.Following these early models, an international standard has
+          been created, the ISO 6425 norm, which sets the rules for a watch
+          officially named dive watch. This includes standards on water/pressure
+          resistance, the presence of a unidirectional bezel with 5-minute
+          markings, readability in total darkness, the presence of an indication
+          that the watch is running in the dark (often a luminous seconds hand),
+          magnetic and shock resistance and more.
+        </p>
+      </div>
+    </div>
+    <!--using bootstrap to create the grid layout-->
+    <div class="container">
+      <div class="row">
+        <div class="col-md">
+          <img src="../diver/diver5.jpg" alt="Blancpain Fifty Fathoms" />
+          <p>Rotomatic Incabloc Fifty Fathoms</p>
+          <article>
+            Introduced in 1953, the Blancpain Fifty Fathoms is widely regarded
+            as the first modern dive watch equipped with a rotating
+            unidirectional bezel with a diving scale
+          </article>
+        </div>
+        <div class="col-md">
+          <img src="../diver/diver6.jpg" alt="Rolex Submariner" />
+          <p>REF. 6204 1953 Rolex Submariner</p>
+          <article>
+            In the mid-1950s, Rolex introduced a sports watch specifically
+            designed for diving, the Rolex Submariner, which foresaw a growing
+            demand for water- and corrosion-resistant watches.In 1954, the first
+            Submariner model was presented to the public at the famous
+            Baselworld trade show under reference 6204.
+          </article>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <img src="../diver/diver7.jpg" alt="watch lume" />
+          <p>Omega & Rolex Watch Lume</p>
+          <article>
+            To be able to read a timepiece when the light was low was a vital
+            attribute to getting the job done. In short, the evolution of
+            luminous materials is one of the most important parts of
+            watchmaking, even if we may take it for granted today.
+          </article>
+        </div>
+      </div>
+    </div>
+    <div class="watchlist">
+      <h3>TimeKeeper Watch List</h3>
+    </div>
+    <!--So That the card template appears at the bottom and not at the top-->
+    <div class="container">
+      <div id="sub_container" class="row"></div>
+    </div>
+    <br /><br />
+    <!-- End of multiple card type-->
+    <!-- Footer Start -->
+    <footer>
+      <div class="footer-content">
+        <h3>TimeKeeper</h3>
+        <p>
+          This website was created by watch enthusiasts for watch enthusiasts to
+          be lost into the world of horology.
+        </p>
+        <!--Soial media icons-->
+        <ul class="social">
+          <li><a href="" class="fa fa-facebook"></a></li>
+          <li><a href="" class="fa fa-twitter"></a></li>
+          <li><a href="" class="fa fa-youtube"></a></li>
+          <li><a href="" class="fa fa-instagram"></a></li>
+        </ul>
+      </div>
+      <!--Copyright symbol-->
+      <div class="sub">
+        <p>Subcribe to get our lastest newsletter</p>
+      </div>
+      <!--Email validation using js-->
+      <div class="mail">
+        <!--using forms to create the email validation-->
+        <form name="form1" action="#">
+        <ul>
+        <li><input type='text' name='text1'/></li>
+        <li> </li>
+        <li class="Validate"><input type="submit" name="Validate" value="Subscribe" onclick="ValidateEmail(document.form1.text1)"/></li>
+        <li> </li>
+        </ul>
+        </form>
+        </div>
+      <div class="footer-bottom">
+        <p>&#169;TimeKeeper Copyright 2023 All Rights Reserved</p>
+      </div>
+    </footer>
+    <!-- Footer End-->
+  </body>
+</html>

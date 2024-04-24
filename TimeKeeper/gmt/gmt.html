@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>TimeKeeper</title>
+        <meta name="description" content="TimeKeeper">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../gmt/gmt.css">
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      />
+  
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+        crossorigin="anonymous"
+      />
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+        crossorigin="anonymous"
+      />
+  
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+        integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
+       <!-- Start of multiple card type-->
+       <script id="card_template" type="text/x-handlebars-template">
+        {{#each card}}
+        <!--using boostrap grid layout-->
+    <div class="col-md">
+      <div class="panel panel-primary">
+        <div class="panel-heading">{{title}}</div>
+        <div class="panel-body">
+            <!--width 100% to make it responsive-->
+          <img
+            src="../gmt/{{shortCode}}.jpg"
+            class="img-responsive"
+            style="width: 100%" 
+            alt="watch type image"
+          />
+        </div>
+        <div class="panel-footer">{{value}}</div>
+      </div>
+    </div>
+  {{/each}}
+    </script>
+        <script src="../gmt/gmt.js"></script>
+    </head>
+    <body>
+        <!-- Header/Navigation Bar Start-->
+        <header>
+            <div class="logo">
+                <img src="../gmt/Logo.png" alt="TimeKeeper Logo">
+            </div>
+            <input type="checkbox" id="nav_check" hidden>
+            <nav>
+                <div class="logo">
+                    <img src="../gmt/Logo.png" alt="TimeKeeper Logo">
+                </div>
+                <!--using unorder list and list to create the header-->
+                <ul>
+                    <li>
+                        <a href="../index/index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="../diver/diver.html">Diver</a>
+                    </li>
+                    <li>
+                        <a href="../chronograph/chronograph.html">Chronograph</a>
+                    </li>
+                    <li>
+                        <a href="../dress/dress.html">Dress</a>
+                    </li>
+                    <li>
+                        <a href="../gmt/gmt.html"class="active">GMT</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Header/Navigation for mobile the three lines-->
+            <label for="nav_check" class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </label>
+        </header>
+        <!-- Header/Navigation Bar End-->
+        <!-- Iconic picture-->
+        <span class = "main-pic">
+            <img src ="../gmt/gmt1.jpg" alt = "Rolex GMT Master II">
+            <p>GMT-Master II Ref.126710BLRO</p>
+        </span>
+        <!-- GMT Start -->
+        <span class = "history">
+            <h2>GMT Watch 101:</h2>
+                <span class ="intro">
+                    <article><firstletter>T</firstletter>he pure brilliance of a GMT watch comes from its simplistic and ingenious engineering. The 24-hour clock hands usually have a different color and are geared to turn half as quickly as the 12-hour hands. To put it simply, the 12-hour clock hands complete a full rotation twice a day. Whereas, the 24-hour clock hands spin around only once. The 24-hour watch also enables the user to easily distinguish whether it is AM or PM.</article>
+                </span>
+        </span>
+        <!--Using bootstrap to create a grid format-->
+        <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                <img src = "../gmt/gmt2.jpg" alt = "Glycine Airman">
+                <p>A vintage Glycine Airman watch</p>
+                <article>The creation of the first GMT watch is often credited to a small brand named Glycine. Its 1953 Airman watch was capable of tracking two 24-hour time zones at once, thanks to a 24-hour rotating bezel and a dial calibrated to display the time on a 24-hour basis.</article>
+              </div>
+              <div class="col-sm">
+                <img src = "../gmt/gmt3.jpg" alt = "Rolex GMT Master">
+                <p>Rolex GMT-Master 6542</p>
+                <article>However, it was Rolex that popularised the concept of the GMT watch with its GMT-Master. Released in 1954 and conceived for Pan Am pilots, this watch defined the genre and is still a blueprint for the category. It combined a traditional 12-hour display of local time, a 24-hour scale indicated by an arrow-tipped hand (not independent back then) and a two-tone rotating bezel with a 24-hour scale, enabling the wearer to display the time in other zones. And with it, the GMT watch became an essential tool for travellers.</article>
+              </div>
+            </div>
+          </div>
+          <div class ="watchlist">
+            <h3>TimeKeeper Watch List</h3>
+        </div>
+            <!--So that the template appears at the bottom-->
+                <div class="container">
+                    <div id="sub_container" class="row">
+                    </div>
+                  </div>
+                  <!--There is a spacing before the footer-->
+                  <br /><br />
+                  <!-- End of multiple card type-->
+        <!-- Footer Start -->
+        <footer>
+            <div class ="footer-content">
+                <h3>TimeKeeper</h3>
+                <p>This website was created by watch enthusiasts for watch enthusiasts to be lost into the world of horology.</p>
+            <!--Soial media icons-->
+            <ul class ="social">
+             <li><a href="" class="fa fa-facebook"></a></li>
+             <li><a href="" class="fa fa-twitter"></a></li>
+             <li><a href="" class="fa fa-youtube "></a></li>
+             <li><a href="" class="fa fa-instagram"></a></li> 
+            </ul>
+            </div>
+            <!--Copyright symbol-->
+            <div class = sub>
+                <p>Subcribe to get our lastest newsletter</p>
+            </div>
+            <!--Email validation using js-->
+            <div class="mail">
+                <!--using forms to create the email validation-->
+                <form name="form1" action="#">
+                <ul>
+                <li><input type='text' name='text1'/></li>
+                <li> </li>
+                <li class="Validate"><input type="submit" name="Validate" value="Subscribe" onclick="ValidateEmail(document.form1.text1)"/></li>
+                <li> </li>
+                </ul>
+                </form>
+                </div>
+            <div class ="footer-bottom">
+                <p> &#169;TimeKeeper Copyright 2023 All Rights Reserved</p>
+            </div>
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- Footer End-->
+    </body>
+</html>

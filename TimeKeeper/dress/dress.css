@@ -1,0 +1,294 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /*shrink the width*/
+    list-style: none;
+    text-decoration: none;
+}
+body {
+    background: white;
+}
+/* Header/Navigation Bar Start */
+img {
+    width: 100%; /*make it responsive*/
+}
+header {
+    width: 100%;
+    height: 70px;
+    background: #fefefe;
+    display: flex; /* so that the header is one line  */
+    align-items: center; /*centeralise everything*/
+    justify-content: space-between;
+    padding: 0 40px;
+    border-radius: 0 0 10px 10px;
+    margin: 0 auto;
+}
+.logo {
+    width: 180px;/*logo should not be too small*/
+    margin-top: 8px;
+}
+nav .logo {
+    display: none; 
+}
+nav ul {
+    display: flex; /* so that the header is one line  */
+}
+nav ul li a {
+    color: #212526;
+    display: block;
+    margin: 0 2px;
+    font-weight: 600;
+    padding: 8px 18px;
+    transition: 0.2s;
+    border-radius: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+nav ul li a:hover {
+    background: #f6f4ff;    background: #f6f4ff; /*color for the hover effect*/
+}
+nav ul li a.active { /* when selected turns black  */
+    color: #fff;
+    background: black;
+}
+.hamburger {
+    display: none;
+    height: fit-content;
+    cursor: pointer; /* have the finger on the headers  */
+    padding: 3px 8px;
+    border-radius: 5px;
+    transition: 0.2s; /* have the effect  */
+}
+.hamburger:hover {
+    background: #f6f4ff; /*color for the hover effect*/
+}
+.hamburger .line {
+    width: 30px;
+    height: 2px;
+    margin: 6px 0;
+    background: #212526;
+}
+/* Making the website responsive*/
+@media only screen and (max-width: 1100px) {
+    header {
+        width: 90%;
+        padding: 0 20px;
+    }
+    nav {
+        position: absolute; /*it stay at the top does not move*/
+        left: -300px;
+        top: 0;
+        z-index: 999; /*ensure it is always at the top*/
+        width: 280px;
+        height: 100vh;
+        background-color: #fefefe;
+        transition: 0.2s;   /* have the effect  */
+        box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.05);
+    }
+    #nav_check:checked ~ nav {
+        left: 0;
+    }
+    nav .logo {
+        display: block;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        margin-left: 30px;
+    }
+    nav ul {
+        display: block;
+        padding: 0 20px;
+        margin-top: 30px;
+    }
+    nav ul li a {
+        margin-bottom: 5px;
+        padding: 15px;
+        border-radius: 5px;
+    }
+    .hamburger {
+        display: block;
+    }
+    .container{
+        width: 100%;
+        height: auto;
+    }
+    .carousel{
+        width: 100%; /* making it responsive */
+        max-width: 500px;
+    }
+    .buttons-container {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto; /* so that the button fits the frame */
+        padding-right: 100px; /* so that the button fits the frame */
+      }
+      .footer{
+        display: inline; /* set width and height */
+    }
+}
+/* Header/Navigation Bar End */
+/* Footer start*/
+footer{
+    position: relative; /* relative to its normal position */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111;
+    height: auto;
+    padding-bottom: 40px;
+    width: 100%; /* make footer responsive */
+    color: white; 
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.footer-content{ /* aligning the footer making everything appear at the center*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+h3{
+    font-size: 2.1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px; /* should not be too small */
+    color: #cacdd2;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.social{ /* centralise the social media icons*/
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.social li{
+    margin: 0 10px;
+}
+footer li a{
+    text-decoration: none;
+    color: #fff;
+    border: 1.1px solid white;
+    padding: 8px;
+    border-radius: 50%;
+    width: 35px;
+}
+.footer-bottom p{
+    text-align: center;
+    font-size: 14px;
+    padding: 20px;
+}
+.sub{
+    display: flex; /* centre all the content*/
+    justify-content: center; 
+    align-items: flex-start;
+}
+/* Footer end*/
+.carousel {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    height: 400px;
+    width: 500px;
+    overflow: hidden; /* so the rest of the images is hidden important for carousel */
+    position:absolute; /* so remains at the top */
+    margin: 0 auto;
+  }
+  .carousel .image-container .img{
+    display:block;
+   height: auto; 
+   max-width: 100%; /* making it responsive */
+   margin: 0 auto;
+  }
+  .image-container {
+    display: flex; 
+    transform: translateX(0); /* moves the image*/
+    transition: transform 0.5s ease-in-out; /* scrolling effect */
+    margin: 0 auto;
+  }
+  
+  .buttons-container {
+    display: flex;
+    justify-content: space-between;   /*have a gap between the button*/
+    margin: 0 auto;
+  }
+  
+  .btn {
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer; /* have the finger icon when clicking */
+    width: 49.5%;
+    margin: 0 auto;
+  }
+  
+  .btn:hover {
+    opacity: 0.9; 
+  }
+  
+  .btn:focus {
+    outline: none;
+  }
+.history ::first-letter{ /* making the letter big */
+    font-weight: bold;
+    color: darkgreen;
+    font-size: 35px;
+}
+.history{
+    font-size: 20px; /* should not be too small*/
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.col-sm img{
+    width: 100%; /* so that image fits */
+    height: 300px;
+}
+.col-sm p{
+    font-size: 15px; 
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.col-sm article{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.watchlist h3{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.panel-footer{
+    font-size: 20px;
+    text-align: center;
+}
+.panel-heading{
+    font-size: 20px;
+    text-align: center;
+}
+.mail {
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%; /* making it all responsive */
+    border: 1px soild rgb(1, 20, 24);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    }
+    input {
+    font-size: 20pt;
+    }
+    input:focus, textarea:focus{
+    background-color: lightyellow; /* when typing box is higlighted */
+    }
+    input submit {
+    font-size: 10pt;/* should not be too small */
+    }

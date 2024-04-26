@@ -1,0 +1,66 @@
+/* Global styles */
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center; /*  set aligment vertical */
+    align-items: center; /*  set aligment horizontal */
+    height: 100vh;
+    background-color: hsl(0, 0%, 95%); /* Light background color */
+}
+/* Calculator container */
+#calculator{
+    font-family: Arial, sans-serif;
+    background-color: hsl(0, 0%, 15%);
+    border-radius: 15px;
+    max-width: 500px;
+    overflow: hidden;
+}
+/* Display area */
+#display{
+    width: 100%;
+    padding: 20px;
+    font-size: 4rem;
+    text-align: right;
+    border: none;
+    background-color: hsl(0, 0%, 15%); /* Dark background color */
+    color: white;
+}
+/* Calculator keys */
+#keys{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* Four columns grid layout */
+    gap: 15px;
+    padding: 20px;
+}
+/* Calculator buttons */
+button{
+    width: 100px;
+    height: 80px;
+    border-radius: 10px;
+    border: none;
+    background-color: hsl(0, 0%, 30%);
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* Button hover effect */
+button:hover{
+    background-color: hsl(0, 0%, 40%); /* Darker background on hover */
+}
+/* Button active effect */
+button:active{
+    background-color: hsl(0, 0%, 50%); /* Even darker background when pressed */
+}
+/* Operator buttons */
+.operator-btn{
+    background-color: hsl(35, 100%, 55%); /* Operator button color */
+}
+/* Operator button hover effect */
+.operator-btn:hover{
+    background-color: hsl(35, 100%, 65%); /* Darker hover effect for operator buttons */
+}
+/* Operator button active effect */
+.operator-btn:active{
+    background-color: hsl(35, 100%, 75%); /* Even darker active effect for operator buttons */
+}

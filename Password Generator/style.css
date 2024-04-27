@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 400px;
+    margin: 20px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="number"], input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+textarea {
+    margin-top: 15px;
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    resize: none;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+}
+/* Add styles for the cracking time display */
+.cracking-time {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+
+/* Optional: Style for the upgrade message */
+.browsehappy {
+    background-color: #f44336;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+/* Dark mode styles */
+.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.dark-mode .container {
+    background-color: #333333;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode button {
+    background-color: #0056b3;
+}
+
+.dark-mode button:hover {
+    background-color: #003366;
+}
+
+.dark-mode textarea {
+    border: 1px solid #555555;
+    background-color: #222222;
+    color: #ffffff;
+}
+
+/* Toggle switch styles */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: background-color 0.3s ease;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Optional: Customize toggle label position */
+.toggle-label {
+    margin-left: 10px;
+}
